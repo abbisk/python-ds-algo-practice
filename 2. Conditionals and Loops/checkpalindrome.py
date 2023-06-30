@@ -14,18 +14,32 @@
 # false
 # 
 
-def checkPalindrome(n):
-    reverse = 0
-    while n>0:
-        remainder=n%10
-        n= int(n/10)
-        reverse=reverse*10+remainder
-    return reverse
+# def checkPalindrome(n):
+#     reverse = 0
+#     while n>0:
+#         remainder=n%10
+#         n= int(n/10)
+#         reverse=reverse*10+remainder
+#     return reverse
 
 
-n= int(input("Enter number to check palindrome: "))
-reverse = checkPalindrome(n)
-if n==reverse:
-    print("Palindrome")
+# n= int(input("Enter number to check palindrome: "))
+# reverse = checkPalindrome(n)
+# if n==reverse:
+#     print("Palindrome")
+# else:
+#     print("Not palindrome")
+
+# Method 2
+n= int(input("Enter value to check palindrome: "))
+realnum = n
+reverse = 0
+while n>0:
+    reminder = n%10
+    reverse= reverse*10+reminder
+    n = n//10
+
+if reverse == realnum:
+    print("Plaindrome")
 else:
-    print("Not palindrome")
+    print("Not a palindrome")
